@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import {BiSearch} from  'react-icons/bi'
+import {AiOutlineHome, AiOutlinePlusCircle} from  'react-icons/ai'
 
 const Header = () => {
   return (
    
       
-      <div className='flex items-center justify-between px-2 max-w-6xl mx-auto py-4'>
+      <div className='flex items-center justify-between px-2 max-w-6xl xl:mx-auto py-4 mx-4'>
           {/* Left */}
             <div className='h-24 w-24 relative hidden lg:inline-grid cursor-pointer'>
                 <Image src="https://www.dhphoto.se/wp-content/uploads/2023/03/Instagram-Logo-Black-And-White-Vector.png" alt='' fill className=''/>
@@ -26,7 +27,12 @@ const Header = () => {
 
 
             {/* Right */}
-            <h1>Right side</h1>
+            <div className='flex items-center space-x-4'>
+            <AiOutlineHome className='hidden md:inline-flex text-2xl cursor-pointer duration-200 hover:scale-125 ease-out'/>
+            <AiOutlinePlusCircle className='text-2xl cursor-pointer duration-200 hover:scale-125 ease-out'/>
+
+            <img src={'https://media.licdn.com/dms/image/C4E03AQEuemhDoExlQQ/profile-displayphoto-shrink_800_800/0/1645550396928?e=2147483647&v=beta&t=JBhpct7OftTjaeXlR0LHOD7iihB84w2wYZEyH-L7WXE'}  alt='user image' className='h-10 rounded-full cursor-pointer'/>
+            </div>
 
 
       </div>
