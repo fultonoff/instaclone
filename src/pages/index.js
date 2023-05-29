@@ -16,6 +16,9 @@ export default function Home() {
       {/* Header */}
       <Header />
       {/* Header */}
+
+      {/* Feed */}
+      
     </main>
   );
 }

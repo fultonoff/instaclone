@@ -6,7 +6,9 @@ import {AiOutlineHome, AiOutlinePlusCircle} from  'react-icons/ai'
 const Header = () => {
   return (
    
-      
+      <div className='shadow-sm border-b sticky top-0 bg-white z-30'>
+
+
       <div className='flex items-center justify-between px-2 max-w-6xl xl:mx-auto py-4 mx-4'>
           {/* Left */}
             <div className='h-24 w-24 relative hidden lg:inline-grid cursor-pointer'>
@@ -34,6 +36,8 @@ const Header = () => {
             <img src={'https://media.licdn.com/dms/image/C4E03AQEuemhDoExlQQ/profile-displayphoto-shrink_800_800/0/1645550396928?e=2147483647&v=beta&t=JBhpct7OftTjaeXlR0LHOD7iihB84w2wYZEyH-L7WXE'}  alt='user image' className='h-10 rounded-full cursor-pointer'/>
             </div>
 
+
+      </div>
 
       </div>
 
