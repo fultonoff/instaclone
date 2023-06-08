@@ -37,7 +37,7 @@ const Header = () => {
             {session ? (
                 <>
                 <AiOutlinePlusCircle className='text-2xl cursor-pointer duration-200 hover:scale-125 ease-out'/>
-                <img src={session.user.image}  alt='user image' className='h-10 rounded-full cursor-pointer' onClick={signOut}/>
+                <img src={session.user.image}  alt='user image' className='h-10 rounded-full cursor-pointer' />
                 </>
             ): <button onClick={signIn}>Sign in</button>}
 
