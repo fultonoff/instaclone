@@ -3,10 +3,12 @@ import Image from 'next/image'
 import {BiSearch} from  'react-icons/bi'
 import {AiOutlineHome, AiOutlinePlusCircle} from  'react-icons/ai'
 import { useSession, signIn, signOut } from 'next-auth/react'
+import { useRecoilState } from 'recoil'
+import { modalState } from '../../atom/modalAtom'
 
 const Header = () => {
     const {data: session} = useSession()
-    console.log(session);
+  const [open, setOpen] = useRecoilState(modalState)
   return (
    
       <div className='shadow-sm border-b sticky top-0 bg-white z-30'>
@@ -36,7 +38,7 @@ const Header = () => {
             <AiOutlineHome className='hidden md:inline-flex text-2xl cursor-pointer duration-200 hover:scale-125 ease-out'/>
             {session ? (
                 <>
-                <AiOutlinePlusCircle className='text-2xl cursor-pointer duration-200 hover:scale-125 ease-out'/>
+                <AiOutlinePlusCircle className='text-2xl cursor-pointer duration-200 hover:scale-125 ease-out' onClick={()=> setOpen(true)}/>
                 <img src={session.user.image}  alt='user image' className='h-10 rounded-full cursor-pointer' />
                 </>
             ): <button onClick={signIn}>Sign in</button>}
